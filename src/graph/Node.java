@@ -1,15 +1,20 @@
 package graph;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 /**
  * Created by rutanjr on 2016-07-13.
  */
 public class Node {
-    private ArrayList<Edge> edges = new ArrayList<Edge>();
+    private Hashtable<String,Edge> edges;
     private String id;
 
-    public Node(ArrayList<Edge> edges, String id){
+    public Node(String id){
+        this.id = id.toUpperCase();
+    }
+
+    public Node(Hashtable edges, String id){
         this.edges = edges;
         this.id = id;
     }
@@ -18,8 +23,18 @@ public class Node {
         return id;
     }
 
-    public ArrayList<Edge> getEdges(){
+    public Hashtable<String, Edge> getEdges(){
         return edges;
+    }
+
+    public void addEdge(Edge e) {
+        this.edges.put(e.getName(), e);
+    }
+
+
+
+    public Edge getEdge(String edgeId){
+        return edges.get(edgeId);
     }
 
     /**
