@@ -15,12 +15,12 @@ public class Main {
         Graph graph = new Graph();
         Parser parser = new Parser(new File("input/apa.xml"));
         initGraph(graph, parser.getData());
-        graph.getPaths(graph.getNode("MYDESTINATION"), graph.getNode("FIRSTTABLE"));
+        graph.getPaths(graph.getNode("MR5_REFTYP"), graph.getNode("MR5_REFENHET"));
     }
 
     private static void initGraph(Graph graph, List<String> data){
         for(String str : data) {
-            String[] info = str.split("\"");
+            String[] info = str.split("\'");
 
             String link = info[1].toUpperCase();
             String origin = info[3].toUpperCase();
@@ -30,23 +30,25 @@ public class Main {
             Node nodeTwo;
             Edge edge;
 
-            if(!graph.containsNode(origin)){
-                graph.addNode(new Node(origin));
+            if(!origin.contains("ENUM") && !destination.contains("ENUM")) {
+                if (!graph.containsNode(origin)) {
+                    graph.addNode(new Node(origin));
+                }
+
+                if (!graph.containsNode(destination)) {
+                    graph.addNode(new Node(destination));
+                }
+
+                nodeOne = graph.getNode(origin);
+                nodeTwo = graph.getNode(destination);
+
+                edge = new Edge(origin, destination, link);
+
+                graph.addEdge(edge);
+
+                nodeOne.addEdge(edge);
+                nodeTwo.addEdge(edge);
             }
-
-            if(!graph.containsNode(destination)){
-                graph.addNode(new Node(destination));
-            }
-
-            nodeOne = graph.getNode(origin);
-            nodeTwo = graph.getNode(destination);
-
-            edge = new Edge(origin, destination, link);
-
-            graph.addEdge(edge);
-
-            nodeOne.addEdge(edge);
-            nodeTwo.addEdge(edge);
         }
     }
 }

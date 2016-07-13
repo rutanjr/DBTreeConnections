@@ -1,9 +1,69 @@
-
-
 <Links>
-	<Link id="mittId" origin="firstTable" destination="myDestination"/>
-	<Link id="mittId2" origin="secondTable" destination="myDestination"/>
-	<Link id="mittId3" origin="firstTable" destination="secondTable"/>
-	<Link id="mittId4" origin="firstTable" destination="secondTable"/>
-	<Link id="mittId5" origin="firstTable" destination="secondTable"/>
+		<Link id='id10' origin='MR5_MATNING' destination='MR5_AUDIELL' cost='1' >O.OID=D.OID_MÄTNING</Link>
+	<Link id='id16' origin='MR5_DIESEL' destination='MR5_DIESEL_REL' cost='1' >O.OID=D.OID_DIESEL</Link>
+	<Link id='id19' origin='MR5_MATNING' destination='MR5_EKO' cost='1' >O.OID=D.OID_MÄTNING</Link>
+	<Link id='id21' origin='MR5_OPERATION' destination='MR5_EVENT' cost='1' >O.OID=D.OID_OPERATION</Link>
+	<Link id='id23' origin='MR5_INENHET' destination='MR5_INSKICK' cost='1' >O.OID=D.OID_INENHET</Link>
+	<Link id='id26' origin='MR5_MATNING' destination='MR5_INTERCEPT' cost='1' >O.OID=D.OID_MÄTNING</Link>
+	<Link id='id29' origin='MR5_EVENT' destination='MR5_MATNING' cost='1' >O.OID=D.OID_EVENT</Link>
+	<Link id='id30' origin='MR5_REFENHET' destination='MR5_MATNING' cost='1' >O.OID=D.OID_REFENHET</Link>
+	<Link id='id31' origin='MR5_SEKVENS' destination='MR5_MATNING' cost='1' >O.OID=D.OID_SEKVENS</Link>
+	<Link id='id35' origin='MR5_INSKICK' destination='MR5_MEDIA' cost='1' >O.OID=D.OID_INSKICK</Link>
+	<Link id='id38' origin='MR5_EVENT' destination='MR5_NOTERING' cost='1' >O.OID=D.OID_EVENT</Link>
+	<Link id='id39' origin='MR5_SEKVENS' destination='MR5_NOTERING' cost='1' >O.OID=D.OID_SEKVENS</Link>
+	<Link id='id41' origin='MR5_MATNING' destination='MR5_OVR_FREKVENS' cost='1' >O.OID=D.OID_MÄTNING</Link>
+	<Link id='id43' origin='MR5_MATNING' destination='MR5_PROPELLER' cost='1' >O.OID=D.OID_MÄTNING</Link>
+	<Link id='id44' origin='MR5_PROPELLER' destination='MR5_PROPELLER_REL' cost='1' >O.OID=D.OID_PROPELLER</Link>
+	<Link id='id45' origin='MR5_REFKLASS' destination='MR5_REFENHET' cost='1' >O.OID=D.OID_REFKLASS</Link>
+	<Link id='id46' origin='MR5_REFENHET' destination='MR5_REFENHET' cost='1' >O.OID=D.OID_URSPRUNG</Link>
+	<Link id='id47' origin='MR5_REFENHET' destination='MR5_REFENHET_KORSREF' cost='1' >O.OID=D.OID_KORSREF</Link>
+	<Link id='id48' origin='MR5_REFENHET' destination='MR5_REFENHET_KORSREF' cost='1' >O.OID=D.OID_REFENHET</Link>
+	<Link id='id49' origin='MR5_REFTYP' destination='MR5_REFKLASS' cost='1' >O.OID=D.OID_REFTYP</Link>
+	<Link id='id50' origin='MR5_REFKLASS' destination='MR5_REFKLASS' cost='1' >O.OID=D.OID_URSPRUNG</Link>
+	<Link id='id51' origin='MR5_REFKLASS' destination='MR5_REFKLASS_KORSREF' cost='1' >O.OID=D.OID_KORSREF</Link>
+	<Link id='id52' origin='MR5_REFKLASS' destination='MR5_REFKLASS_KORSREF' cost='1' >O.OID=D.OID_REFKLASS</Link>
+	<Link id='id53' origin='MR5_REFSLAG' destination='MR5_REFTYP' cost='1' >O.OID=D.OID_REFSLAG</Link>
+	<Link id='id54' origin='MR5_MEDIA' destination='MR5_SEKVENS' cost='1' >O.OID=D.OID_MEDIA</Link>
+	<Link id='id58' origin='MR5_MATNING' destination='MR5_TRANSIENT' cost='1' >O.OID=D.OID_MÄTNING</Link>
+	<Link id='id61' origin='STDFILE_STORAGEAREA' destination='MULTIMEDIA' cost='1' >O.NAME=D.STORAGEAREA</Link>
+	<Link id='id62' origin='STDFILE' destination='MULTIMEDIA_DATA' cost='1' >O.OID=D.OID</Link>
+	<Link id='id64' origin='STDFILE_STORAGEAREA' destination='STDFILE' cost='1' >O.NAME=D.STORAGEAREA</Link>
+	<Link id='id65' origin='STDFILE' destination='STDFILE_DATA' cost='1' >O.OID=D.OID</Link>
+	<Link id='id66' origin='STDFILE_STORAGEAREA' destination='STDFILETODELETE' cost='1' >O.NAME=D.STORAGEAREA</Link>
+	<Link id='id68' origin='STDFILE_STORAGEAREA' destination='STDIMAGE' cost='1' >O.NAME=D.STORAGEAREA</Link>
+	<Link id='id69' origin='STDIMAGE' destination='STDIMAGE_DATA' cost='1' >O.OID=D.OID</Link>
+	<Link id='id70' origin='STDIMAGE' destination='STDIMAGE_ICON' cost='1' >O.OID=D.OID</Link>
+	<Link id='id71' origin='STDIMAGE' destination='STDIMAGE_SCREEN' cost='1' >O.OID=D.OID</Link>
+	<Link id='id72' origin='VSDB_KLASS' destination='VSDB_ENHET' cost='1' >O.ID_KLASS=D.ID_KLASS</Link>
+	<Link id='id73' origin='PDHTRANSACTION' destination='X_MR5_EVENT' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id74' origin='PDHTRANSACTION' destination='X_MR5_EVENT' cost='1' >O.TRANSID=D.TransTo</Link>
+	<Link id='id75' origin='PDHTRANSACTION' destination='X_MR5_INSKICK' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id76' origin='PDHTRANSACTION' destination='X_MR5_INSKICK' cost='1' >O.TRANSID=D.TransTo</Link>
+	<Link id='id77' origin='PDHTRANSACTION' destination='X_MR5_MATNING' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id78' origin='PDHTRANSACTION' destination='X_MR5_MATNING' cost='1' >O.TRANSID=D.TransTo</Link>
+	<Link id='id79' origin='PDHTRANSACTION' destination='X_MR5_MEDIA' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id80' origin='PDHTRANSACTION' destination='X_MR5_MEDIA' cost='1' >O.TRANSID=D.TransTo</Link>
+	<Link id='id81' origin='PDHTRANSACTION' destination='X_MR5_NOTERING' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id82' origin='PDHTRANSACTION' destination='X_MR5_NOTERING' cost='1' >O.TRANSID=D.TransTo</Link>
+	<Link id='id83' origin='PDHTRANSACTION' destination='X_MR5_REFENHET' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id84' origin='PDHTRANSACTION' destination='X_MR5_REFENHET' cost='1' >O.TRANSID=D.TransTo</Link>
+	<Link id='id85' origin='PDHTRANSACTION' destination='X_MR5_REFKLASS' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id86' origin='PDHTRANSACTION' destination='X_MR5_REFKLASS' cost='1' >O.TRANSID=D.TransTo</Link>
+	<Link id='id87' origin='PDHTRANSACTION' destination='X_MR5_REFSLAG' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id88' origin='PDHTRANSACTION' destination='X_MR5_REFSLAG' cost='1' >O.TRANSID=D.TransTo</Link>
+	<Link id='id89' origin='PDHTRANSACTION' destination='X_MR5_REFTYP' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id90' origin='PDHTRANSACTION' destination='X_MR5_REFTYP' cost='1' >O.TRANSID=D.TransTo</Link>
+	<Link id='id91' origin='PDHTRANSACTION' destination='X_MR5_SEKVENS' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id92' origin='PDHTRANSACTION' destination='X_MR5_SEKVENS' cost='1' >O.TRANSID=D.TransTo</Link>
+	<Link id='id93' origin='PDHTRANSACTION' destination='XC_MR5_EVENT' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id94' origin='PDHTRANSACTION' destination='XC_MR5_INSKICK' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id95' origin='PDHTRANSACTION' destination='XC_MR5_MATNING' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id96' origin='PDHTRANSACTION' destination='XC_MR5_MEDIA' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id97' origin='PDHTRANSACTION' destination='XC_MR5_NOTERING' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id98' origin='PDHTRANSACTION' destination='XC_MR5_REFENHET' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id99' origin='PDHTRANSACTION' destination='XC_MR5_REFKLASS' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id100' origin='PDHTRANSACTION' destination='XC_MR5_REFSLAG' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id101' origin='PDHTRANSACTION' destination='XC_MR5_REFTYP' cost='1' >O.TRANSID=D.TransFrom</Link>
+	<Link id='id102' origin='PDHTRANSACTION' destination='XC_MR5_SEKVENS' cost='1' >O.TRANSID=D.TransFrom</Link>
 </Links>
+

@@ -58,7 +58,7 @@ public class Edge {
     @Override
     public String toString() {
         String returnString;
-        returnString = "Name: " + name + "\n\t" + "Tables: " + node1 + " & " + node2 + "\n";
+        returnString = "Name: " + name + "\t" + "Tables: " + node1 + " & " + node2;
         return returnString;
     }
 }
