@@ -2,6 +2,7 @@ package graph;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Hashtable;
 import java.util.PriorityQueue;
 
@@ -41,16 +42,19 @@ public class Graph {
         return edges.get(id);
     }
 
-    public PriorityQueue<ArrayList<Edge>> getPaths(Node origin, Node destination) {
-        PriorityQueue<ArrayList<Edge>> paths = new PriorityQueue<ArrayList<Edge>>();
+    public ArrayList<ArrayList<Edge>> getPaths(Node origin, Node destination) {
+        ArrayList<ArrayList<Edge>> paths = new ArrayList<ArrayList<Edge>>();
         getPath(origin, destination, new ArrayList<Edge>(), paths);
-        for(ArrayList x : paths){
-            System.out.println(x.size());
+        for(ArrayList<Edge> x : paths){
+            System.out.println("NEW PATH");
+            for(Edge e : x){
+                System.out.println(e.toString());
+            }
         }
         return paths;
     }
 
-    private PriorityQueue<ArrayList<Edge>> getPath(Node current, Node destination, ArrayList<Edge> currentPath, PriorityQueue<ArrayList<Edge>> allPaths) {
+    private ArrayList<ArrayList<Edge>> getPath(Node current, Node destination, ArrayList<Edge> currentPath, ArrayList<ArrayList<Edge>> allPaths) {
         if(current == destination) {
             allPaths.add(currentPath);
         }

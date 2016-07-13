@@ -3,5 +3,7 @@
 <Links>
 	<Link id="mittId" origin="firstTable" destination="myDestination"/>
 	<Link id="mittId2" origin="secondTable" destination="myDestination"/>
-	<Link id="mittId3" origin="firstTable" destination="thirdTable"/>
+	<Link id="mittId3" origin="firstTable" destination="secondTable"/>
+	<Link id="mittId4" origin="firstTable" destination="secondTable"/>
+	<Link id="mittId5" origin="firstTable" destination="secondTable"/>
 </Links>
