@@ -15,10 +15,11 @@ public class Graph {
         nodes = new Hashtable<>();
     }
 
-    public void addNode(Node node){
+    public void addNode(String id, Node node){
+        nodes.put(id, node);
     }
 
-    public void addEdge(){
-
+    public void addEdge(String id, Edge edge){
+        edges.put(id, edge);
     }
 }
