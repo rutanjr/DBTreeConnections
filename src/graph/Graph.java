@@ -15,11 +15,19 @@ public class Graph {
         nodes = new Hashtable<>();
     }
 
-    public void addNode(String id, Node node){
-        nodes.put(id, node);
+    public boolean containsNode(String nodeID){
+        return nodes.containsKey(nodeID);
     }
 
-    public void addEdge(String id, Edge edge){
-        edges.put(id, edge);
+    public boolean containsEdge(String edgeId){
+        return edges.containsKey(edgeId);
+    }
+
+    public void addNode(Node node){
+        nodes.put(node.getId(), node);
+    }
+
+    public void addEdge(Edge edge){
+        edges.put(edge.getName(), edge);
     }
 }

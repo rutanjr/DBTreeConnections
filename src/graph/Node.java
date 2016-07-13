@@ -31,8 +31,6 @@ public class Node {
         this.edges.put(e.getName(), e);
     }
 
-
-
     public Edge getEdge(String edgeId){
         return edges.get(edgeId);
     }

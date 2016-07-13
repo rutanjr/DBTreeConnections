@@ -19,7 +19,11 @@ public class Edge {
         this.name = name;
     }
 
-
+    /**
+     * Gives you information about the other node connected via this edge.
+     * @param node that you know is connected via this edge.
+     * @return the other node that is connected via this edge.
+     */
     public String getTheOtherNode(String node) {
         if(node.equals(node1))
             return node2;
