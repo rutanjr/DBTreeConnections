@@ -42,12 +42,21 @@ public class Graph {
     public ArrayList<Set<Edge>> getPaths(Node origin, Node destination) {
         ArrayList<Set<Edge>> paths = new ArrayList<Set<Edge>>();
         getPath(origin, destination, new ArrayList<Edge>(), paths);
+
+        Collections.sort(paths, new Comparator<Set>(){
+            @Override
+            public int compare(Set s, Set d){
+                return s.size()>d.size()?1:-1;
+            }
+        });
+
         for(Set<Edge> x : paths){
             System.out.println("NEW PATH");
             for(Edge e : x){
                 System.out.println(e.toString());
             }
         }
+
         return paths;
     }
 
