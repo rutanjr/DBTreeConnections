@@ -7,14 +7,14 @@ import java.util.ArrayList;
  */
 public class Node {
     private ArrayList<Edge> edges = new ArrayList<Edge>();
-    private int id;
+    private String id;
 
-    public Node(ArrayList<Edge> edges, int id){
+    public Node(ArrayList<Edge> edges, String id){
         this.edges = edges;
         this.id = id;
     }
 
-    public int getId(){
+    public String getId(){
         return id;
     }
 
