@@ -54,4 +54,11 @@ public class Edge {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        String returnString;
+        returnString = "Name: " + name + "\n\t" + "Tables: " + node1 + " & " + node2 + "\n";
+        return returnString;
+    }
 }

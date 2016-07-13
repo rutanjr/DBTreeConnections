@@ -15,6 +15,7 @@ public class Main {
         Graph graph = new Graph();
         Parser parser = new Parser(new File("input/apa.xml"));
         initGraph(graph, parser.getData());
+        System.out.println(graph.toString());
     }
 
     private static void initGraph(Graph graph, List<String> data){

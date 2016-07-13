@@ -43,4 +43,17 @@ public class Node {
     public int getNoEdges() {
         return edges.size();
     }
+
+    @Override
+    public String toString(){
+        String returnString;
+        returnString = id + ": \n=============================== \n ";
+
+        for (Edge edge : edges.values()) {
+            returnString += (edge.toString() + "\n");
+        }
+
+        returnString += "===============================\n";
+        return returnString;
+    }
 }

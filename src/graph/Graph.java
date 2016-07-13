@@ -38,4 +38,13 @@ public class Graph {
     public Edge getEdge(String id){
         return edges.get(id);
     }
+
+    @Override
+    public String toString() {
+        String returnString = "";
+        for(Node n : nodes.values()){
+            returnString += n.toString();
+        }
+        return returnString;
+    }
 }
