@@ -22,6 +22,10 @@ public class Node {
         return edges;
     }
 
+    /**
+     *
+     * @return number of edges reaching the node.
+     */
     public int getNoEdges() {
         return edges.size();
     }
