@@ -12,6 +12,7 @@ public class Node {
 
     public Node(String id){
         this.id = id.toUpperCase();
+        edges = new Hashtable<String, Edge>();
     }
 
     public Node(Hashtable edges, String id){

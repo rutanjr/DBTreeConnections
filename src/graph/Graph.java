@@ -30,4 +30,12 @@ public class Graph {
     public void addEdge(Edge edge){
         edges.put(edge.getName(), edge);
     }
+
+    public Node getNode(String id){
+        return nodes.get(id);
+    }
+
+    public Edge getEdge(String id){
+        return edges.get(id);
+    }
 }
