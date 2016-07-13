@@ -1,10 +1,7 @@
 package graph;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Hashtable;
-import java.util.PriorityQueue;
+import java.util.*;
 
 /**
  * Created by parke_000 on 2016-07-13.
@@ -42,10 +39,10 @@ public class Graph {
         return edges.get(id);
     }
 
-    public ArrayList<ArrayList<Edge>> getPaths(Node origin, Node destination) {
-        ArrayList<ArrayList<Edge>> paths = new ArrayList<ArrayList<Edge>>();
+    public ArrayList<Set<Edge>> getPaths(Node origin, Node destination) {
+        ArrayList<Set<Edge>> paths = new ArrayList<Set<Edge>>();
         getPath(origin, destination, new ArrayList<Edge>(), paths);
-        for(ArrayList<Edge> x : paths){
+        for(Set<Edge> x : paths){
             System.out.println("NEW PATH");
             for(Edge e : x){
                 System.out.println(e.toString());
@@ -54,9 +51,18 @@ public class Graph {
         return paths;
     }
 
-    private ArrayList<ArrayList<Edge>> getPath(Node current, Node destination, ArrayList<Edge> currentPath, ArrayList<ArrayList<Edge>> allPaths) {
+    private ArrayList<Set<Edge>> getPath(Node current, Node destination, ArrayList<Edge> currentPath, ArrayList<Set<Edge>> allPaths) {
         if(current == destination) {
-            allPaths.add(currentPath);
+            Set n = new HashSet<Edge>(currentPath);
+            for(Set s : allPaths){
+                if(s.equals(n)){
+                    n = null;
+                }
+            }
+
+            if(n != null){
+                allPaths.add(n);
+            }
         }
         for(Edge edge : current.getEdges().values()) {
             if(!currentPath.contains(edge)) {
