@@ -1,0 +1,7 @@
+
+
+<Links>
+	<Link id="mittId" origin="firstTable" destination="myDestination"/>
+	<Link id="mittId2" origin="secondTable" destination="myDestination"/>
+	<Link id="mittId3" origin="firstTable" destination="thirdTable"/>
+</Links>
